@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>Reservia</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
@@ -13,14 +13,14 @@
         <!-- En-tête -->
         <header>
             <!-- Logo du site -->
-            <img src="images/logo/Reservia@3x.png" alt="Logo Reservia">
+            <img id="reservia-logo" src="images/logo/Reservia@3x.png" alt="Logo Reservia">
 
             <!-- Navigation -->
             <nav>
                 <ul>
-                    <li>Hébergements</li>
-                    <li>Activités</li>
-                    <li>S'inscrire</li>
+                    <li><a href="#Resultats">Hébergements</a></li>
+                    <li><a href="#Activites">Activités</a></li>
+                    <li><a href=""><strong>S'inscrire</strong></a></li>
                 </ul>
             </nav>
         </header>
@@ -32,13 +32,33 @@
 
             <!-- Barre de recherche -->
             <form action="" method="POST">
-                <label for="Lieu">Lieu</label><input type="text" name="Lieu" value="Marseille, France">
-                <input type="submit" value="Rechercher">
+                <label for="Lieu" id="Position-icone">Lieu</label>
+                <input type="text" id="Lieu" name="Lieu" value="Marseille, France">
+                <input type="submit" value="Rechercher" id="Rechercher">
             </form>
 
             <!-- Filtres -->
-            Filtres
+            <div id="Filtre-bar">
+                <h2>Filtres</h2>
 
+                <!-- Boutons (4 filtres) -->
+                <div class="filtre">
+                    <label for="economique" id="economique-icone">icone</label>
+                    <input type="button" value="Économique" id="Economique">
+                </div>
+                <div class="filtre">
+                    <label for="familial" id="familial-icone">icone</label>
+                    <input type="button" value="Familial" id="Familial">
+                </div>
+                <div class="filtre">
+                    <label for="romantique" id="romantique-icone">icone</label>
+                    <input type="button" value="Romantique" id="Romantique">
+                </div>
+                <div class="filtre">
+                    <label for="animaux" id="animaux-icone">icone</label>
+                    <input type="button" value="Animaux autorisés" id="Animaux">
+                </div>
+            </div>
             <p>(i) Plus de 500 logements sont disponibles dans cette ville</p>
         </section>
 
@@ -46,11 +66,11 @@
         <section id="Propositions">
 
             <!-- Résultats -->
-            <div id="Résultats">
+            <div id="Resultats">
                 <h1>Hébergements à Marseille</h1>
 
                 <!-- Articles (6 cartes) -->
-                <div id="Articles résultats">
+                <div id="Articles-resultats">
                     <a href="">
                         <article>
                             <h2>Auberge de la Cannebière</h2>
@@ -103,7 +123,7 @@
                 <h1>Les plus populaires (icone)</h1>
 
                 <!-- Articles (3 cartes) -->
-                <div id="Articles populaires">
+                <div id="Articles-populaires">
                     <a href="">
                         <article>
                             <h2>Hôtel Le soleil du matin</h2>
@@ -130,11 +150,11 @@
         </section>
 
         <!-- Section Activités -->
-        <section id="Activités">
+        <section id="Activites">
             <h1>Activités à Marseille</h1>
 
             <!-- Articles (6 cartes) -->
-            <div id="Articles activités">
+            <div id="Articles-activites">
                 <a href="">
                     <article>
                         <h2>Vieux Port</h2>
@@ -170,14 +190,14 @@
 
         <!-- Pied de page -->
         <footer>
-            <div id="A propos">
+            <div id="A-propos">
                 <h2>À propos</h2>
                 <a href="">Fonctionnement du site</a>
                 <a href="">Conditions générales de vente</a>
                 <a href="">Données et confidentialité</a>
             </div>
 
-            <div id="Nos hébergements">
+            <div id="Nos-hebergements">
                 <h2>Nos hébergements</h2>
                 <a href="">Charte qualité</a>
                 <a href="">Soumettre votre hôtel</a>

@@ -1,11 +1,133 @@
+/* Corps de la page */
 body
 {
+    margin: 4%;
+
     /* Police */
     font-family: 'Raleway', sans-serif;
+}
+
+/* Titre */
+h2
+{
+    font-size: medium;
+}
+
+/* En-tête */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Image logo Reservia */
+#reservia-logo
+{
+    height: 40px;
+}
+
+/* Liens */
+a
+{
+    text-decoration: none;
+    color: black;
 }
 
 /* Menu de navigation */
 nav ul
 {
     list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    padding: 20px;
+}
+
+nav a
+{
+    padding-top: 30px;
+}
+
+nav a:focus
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+
+strong
+{
+    color: #0065FC;
+}
+
+/* Barre de recherche */
+form
+{
+    display: flex;
+}
+
+#Position-icone
+{
+    background-color: #F2F2F2;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#Lieu
+{
+    font-weight: bold;
+    padding: 10px;
+    border-color: #F2F2F2;
+    border-style: solid;
+}
+
+#Rechercher
+{
+    color: white;
+    background-color: #0065FC;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style: none;
+}
+
+/* Filtres */
+#Filtre-bar
+{
+    display: flex;
+    align-items: baseline;
+}
+
+.filtre
+{
+    margin: 20px 0px 20px 20px;
+    border-radius: 30px;
+    border: 2px solid gainsboro;
+}
+
+/* #economique-icone
+{
+
+} */
+
+#Economique, #Familial, #Romantique, #Animaux
+{
+    padding: 13px;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+#Economique:hover, #Familial:hover, #Romantique:hover, #Animaux:hover
+{
+    padding: 13px;
+    border: none;
+    border-radius: 30px;
+    background-color:#F2F2F2;
+    font-weight: bold;
+    color:#0065FC;
 }
