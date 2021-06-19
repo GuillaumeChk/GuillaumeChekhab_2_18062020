@@ -7,6 +7,8 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
         </style>
+        <!-- Icones Font Awesome -->
+        <script src="https://kit.fontawesome.com/1d89ec237a.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -32,7 +34,9 @@
 
             <!-- Barre de recherche -->
             <form action="" method="POST">
-                <label for="Lieu" id="Position-icone">Lieu</label>
+                <label for="Lieu" id="Lieu-icone">
+                    <span><i class="fas fa-map-marker-alt"></i></span>
+                </label>
                 <input type="text" id="Lieu" name="Lieu" value="Marseille, France">
                 <input type="submit" value="Rechercher" id="Rechercher">
             </form>
@@ -43,23 +47,35 @@
 
                 <!-- Boutons (4 filtres) -->
                 <div class="filtre">
-                    <label for="economique" id="economique-icone">icone</label>
+                    <label for="Economique" id="economique-icone">
+                        <span style="color: #0065FC;"><i class="fas fa-money-bill-wave"></i></span>
+                    </label>
                     <input type="button" value="Économique" id="Economique">
                 </div>
                 <div class="filtre">
-                    <label for="familial" id="familial-icone">icone</label>
+                    <label for="Familial" id="familial-icone">
+                        <span style="color: #0065FC;"><i class="fas fa-child"></i></span>
+                    </label>
                     <input type="button" value="Familial" id="Familial">
                 </div>
                 <div class="filtre">
-                    <label for="romantique" id="romantique-icone">icone</label>
+                    <label for="Romantique" id="romantique-icone">
+                        <span style="color: #0065FC;"><i class="fas fa-heart"></i></span>
+                    </label>
                     <input type="button" value="Romantique" id="Romantique">
                 </div>
                 <div class="filtre">
-                    <label for="animaux" id="animaux-icone">icone</label>
+                    <label for="Animaux" id="animaux-icone">
+                        <span style="color: #0065FC;"><i class="fas fa-dog"></i></span>
+                    </label>
                     <input type="button" value="Animaux autorisés" id="Animaux">
                 </div>
             </div>
-            <p>(i) Plus de 500 logements sont disponibles dans cette ville</p>
+            
+            <p id="info">
+                <span style="color: #0065FC;" id="info-icone"><i class="fas fa-info fa-sm"></i></span> 
+                Plus de 500 logements sont disponibles dans cette ville
+            </p>
         </section>
 
         <!-- Section Propositions -->
@@ -73,76 +89,95 @@
                 <div id="Articles-resultats">
                     <a href="">
                         <article>
+                            <img srcset="/images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                    src="/images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg" 
+                                    alt="Photo de l'auberge de la Cannebière">
                             <h2>Auberge de la Cannebière</h2>
                             <p>Nuit à partir de 25€</p>
-                            4 étoiles
+                            <p>4 étoiles</p>
                         </article>
                     </a>
                     <a href="">
                         <article>
+                            <img src="/images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg" 
+                                alt="Photo de l'Hôtel du port">
                             <h2>Hôtel du port</h2>
                             <p>Nuit à partir de 52€</p>
-                            5 étoiles
+                            <p>5 étoiles</p>
                         </article>
                     </a>
                     <a href="">
                         <article>
+                            <img src="/images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg" 
+                                alt="Photo de l'Hôtel Les mouettes">
                             <h2>Hôtel Les mouettes</h2>
                             <p>Nuit à partir de 76€</p>
-                            4 étoiles
+                            <p>4 étoiles</p>
                         </article>
                     </a>
                     <a href="">
                         <article>
+                            <img src="/images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg" 
+                                alt="Photo de l'Hôtel de la mer">
                             <h2>Hôtel de la mer</h2>
                             <p>Nuit à partir de 46€</p>
-                            3 étoiles
+                            <p>3 étoiles</p>
                         </article>
                     </a>
                     <a href="">
                         <article>
+                            <img src="/images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" 
+                                alt="Photo de l'Auberge Le Panier">
                             <h2>Auberge Le Panier</h2>
                             <p>Nuit à partir de 23€</p>
-                            4 étoiles
+                            <p>4 étoiles</p>
                         </article>
                     </a>
                     <a href="">
                         <article>
+                            <img src="/images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" 
+                                alt="Photo de l'Hôtel chez Amina">
                             <h2>Hôtel chez Amina</h2>
                             <p>Nuit à partir de 96€</p>
-                            5 étoiles
+                            <p>5 étoiles</p>
                         </article>
                     </a>
                 </div>
 
-                <p>Afficher plus</p>
+                <a href=""><h2>Afficher plus</h2></a>
             </div>
             
             <!-- Populaires -->
             <div id="Populaires">
-                <h1>Les plus populaires (icone)</h1>
+                <h1>Les plus populaires <span><i class="fas fa-chart-line"></i></span></h1>
 
                 <!-- Articles (3 cartes) -->
                 <div id="Articles-populaires">
                     <a href="">
                         <article>
+                            <img src="/images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" 
+                                alt="Photo de l'Hôtel Le soleil du matin">
                             <h2>Hôtel Le soleil du matin</h2>
                             <p>Nuit à partir de 128€</p>
-                            5 étoiles
+                            <p>5 étoiles</p>
                         </article>
                     </a>
                     <a href="">
                         <article>
-                            <h2>Au coeur de l'eau</h2>
+                            <img src="/images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg" 
+                                alt="Photo de Au coeur de l'eau">
+                            <h2>Au coeur de l'eau Chambres d'hôtes</h2>
                             <p>Nuit à partir de 71€</p>
-                            4 étoiles
+                            <p>4 étoiles</p>
                         </article>
                     </a>
                     <a href="">
                         <article>
+                            <img src="/images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg" 
+                                alt="Phot de l'Hôtel Tout bleu et Blanc">
                             <h2>Hôtel Tout bleu et Blanc</h2>
                             <p>Nuit à partir de 68€</p>
-                            4 étoiles
+                            <p>4 étoiles</p>
                         </article>
                     </a>
                 </div>
@@ -157,31 +192,43 @@
             <div id="Articles-activites">
                 <a href="">
                     <article>
+                        <img src="/images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
+                            alt="Photo du Vieux Port">
                         <h2>Vieux Port</h2>
                     </article>
                 </a>
                 <a href="">
                     <article>
+                        <img src="/images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg" 
+                            alt="Photo du Fort de Pomègues">
                         <h2>Fort de Pomègues</h2>
                     </article>
                 </a>
                 <a href="">
                     <article>
+                        <img src="/images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" 
+                            alt="Photo des Îles du Frioul">
                         <h2>Îles du Frioul</h2>
                     </article>
                 </a>
                 <a href="">
                     <article>
+                        <img src="/images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" 
+                            alt="Photo du Parc National des Calanques">
                         <h2>Parc National des Calanques</h2>
                     </article>
                 </a>
                 <a href="">
                     <article>
+                        <img src="/images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"     
+                        alt="Photo de Notre-Dame-de-la-Garde">
                         <h2>Notre-Dame-de-la-Garde</h2>
                     </article>
                 </a>
                 <a href="">
                     <article>
+                        <img src="/images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" 
+                            alt="Photo du Parc Longchamp">
                         <h2>Parc Longchamp</h2>
                     </article>
                 </a>
@@ -190,20 +237,20 @@
 
         <!-- Pied de page -->
         <footer>
-            <div id="A-propos">
+            <div class="Rubrique">
                 <h2>À propos</h2>
                 <a href="">Fonctionnement du site</a>
                 <a href="">Conditions générales de vente</a>
                 <a href="">Données et confidentialité</a>
             </div>
 
-            <div id="Nos-hebergements">
+            <div class="Rubrique">
                 <h2>Nos hébergements</h2>
                 <a href="">Charte qualité</a>
                 <a href="">Soumettre votre hôtel</a>
             </div>
 
-            <div id="Assistance">
+            <div class="Rubrique">
                 <h2>Assistance</h2>
                 <a href="">Centre d'aide</a>
                 <a href="">Nous contacter</a>

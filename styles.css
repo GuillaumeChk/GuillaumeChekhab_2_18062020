@@ -1,8 +1,9 @@
 /* Corps de la page */
 body
 {
-    margin: 4%;
-
+    max-width: 1440px;
+    margin: auto;
+    padding: 20px 50px 50px 50px;
     /* Police */
     font-family: 'Raleway', sans-serif;
 }
@@ -13,7 +14,9 @@ h2
     font-size: medium;
 }
 
+/*  */
 /* En-tête */
+/*  */
 header
 {
     display: flex;
@@ -68,10 +71,10 @@ form
     display: flex;
 }
 
-#Position-icone
+#Lieu-icone
 {
     background-color: #F2F2F2;
-    padding: 10px;
+    padding: 13px 13px 13px 15px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -103,21 +106,31 @@ form
 
 .filtre
 {
+    display: flex;
     margin: 20px 0px 20px 20px;
     border-radius: 30px;
     border: 2px solid gainsboro;
 }
 
-/* #economique-icone
+#economique-icone, #familial-icone, #romantique-icone, #animaux-icone
 {
-
-} */
+    display: flex;
+    border: none;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 13px;
+    margin: -2px;
+    justify-content: center;
+    align-items: center;
+}
 
 #Economique, #Familial, #Romantique, #Animaux
 {
     padding: 13px;
     border: none;
-    border-radius: 30px;
+    border-radius: 50%;
     background-color: transparent;
     font-weight: bold;
 }
@@ -130,4 +143,115 @@ form
     background-color:#F2F2F2;
     font-weight: bold;
     color:#0065FC;
+}
+
+#info-icone
+{
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    padding: 6px;
+    margin-right: 0.6em;
+    justify-content: center;
+    align-items: center;
+}
+
+#info
+{
+    display: flex;
+    align-items: center;
+}
+
+/*  */
+/* SECTION Propositions */
+/*  */
+#Propositions
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Resultats
+{
+    max-width: 800px;
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    background-color:#F2F2F2;
+}
+
+#Populaires
+{
+    min-width: 260px;
+    border: none;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color:#F2F2F2;
+}
+
+#Articles-resultats
+{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+article
+{
+    border: none;
+    width: 230px;
+    height: 180px;
+    margin: 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(211, 211, 211);
+}
+
+article strong
+{
+    color: black;
+}
+
+article img
+{
+    width: 222px;
+    height: 110px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 4px 4px 0 4px;
+}
+
+article p
+{
+    padding: 10px;
+    margin: 0;
+    line-height: 0;
+}
+
+/*  */
+/* Section Activités */
+/*  */
+
+/*  */
+/* Pied de page */
+/*  */
+footer
+{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    background-color: #F2F2F2;
+}
+
+.Rubrique
+{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    line-height:  2em;
 }
