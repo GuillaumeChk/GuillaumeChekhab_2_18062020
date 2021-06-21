@@ -1,17 +1,35 @@
 /* Corps de la page */
 body
 {
-    max-width: 1440px;
     margin: auto;
-    padding: 20px 50px 50px 50px;
     /* Police */
     font-family: 'Raleway', sans-serif;
 }
 
+#Page
+{
+    max-width: 1400px;
+    margin: 0 auto 0 auto;
+    padding: 20px 50px 50px 50px;
+}
+
 /* Titre */
+h1
+{
+    margin: 5px 0 5px 0;
+}
+
 h2
 {
     font-size: medium;
+}
+
+h3
+{
+    font-size: medium;
+    padding-left: 10px;
+    margin: 0;
+    line-height: 0;
 }
 
 /*  */
@@ -35,6 +53,7 @@ a
 {
     text-decoration: none;
     color: black;
+    margin: 15px;
 }
 
 /* Menu de navigation */
@@ -95,6 +114,7 @@ form
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     border-style: none;
+    font-weight: bold;
 }
 
 /* Filtres */
@@ -148,7 +168,7 @@ form
 #info-icone
 {
     display: flex;
-    border: 1px solid gray;
+    border: 1px solid gainsboro;
     border-radius: 50%;
     width: 10px;
     height: 10px;
@@ -175,10 +195,13 @@ form
 
 #Resultats
 {
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    max-width: 880px;
+    width:auto;
     border: none;
     border-radius: 10px;
-    padding: 30px;
+    padding: 30px 0 30px 30px;
     margin-right: 40px;
     margin-bottom: 30px;
     background-color:#F2F2F2;
@@ -194,22 +217,75 @@ form
     background-color:#F2F2F2;
 }
 
-#Articles-resultats
+#Populaire h1
+{
+    justify-content: space-between;
+}
+
+#Articles-resultats, #Articles-populaires
 {
     display: flex;
     flex-wrap: wrap;
-    
+}
+#Articles-populaires
+{
+    flex-direction: column;
 }
 
 article
 {
     border: none;
-    width: 230px;
-    height: 180px;
-    margin: 15px;
+    width: 240px;
+    height: 190px;
+    /* margin: 15px; */
     border-radius: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgb(211, 211, 211);
+}
+
+article h3
+{
+    line-height: normal;
+    letter-spacing: normal;
+    width: auto;
+    word-wrap: break-word;
+}
+
+#Articles-populaires article
+{
+    display: flex;
+    width: 340px;
+    height: 140px;
+}
+
+.vertical-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+#Articles-populaires .vertical-box
+{
+    margin: 5px 5px 20px 5px;
+}
+
+article img
+{
+    object-fit: cover;
+    width: 230px;
+    height: 110px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 5px;
+}
+
+#Articles-populaires article img
+{
+    width: 120px;
+    height: auto;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
 }
 
 article strong
@@ -217,35 +293,91 @@ article strong
     color: black;
 }
 
-article img
-{
-    width: 222px;
-    height: 110px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 4px 4px 0 4px;
-}
-
 article p
 {
     padding: 10px;
+    font-size: small;
     margin: 0;
-    line-height: 0;
+    line-height: 20%;
 }
+
 
 /*  */
 /* Section Activités */
 /*  */
+#Articles-activites
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+#Articles-activites a
+{
+    margin: 20px;
+}
+
+#Articles-activites .vertical-box a
+{
+    margin: 0;
+}
+
+#Articles-activites .vertical-box
+{
+    min-height: 450px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* .text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+#Articles-activites article
+{
+    width: 300px;
+}
+
+#Articles-activites article img
+{
+    width: 300px;
+    padding: 0;
+}
+
+#a1, #a4 {height: 450px; }
+#a2 {height: 240px;}
+#a3 {height: 170px;}
+#a5 {height: 200px;}
+#a6 {height: 210px;}
+
+#a1 img, #a4 img {height: 390px;}
+#a2 img {height: 180px;}
+#a5 img {height: 140px;}
+#a6 img {height: 150px;}
 
 /*  */
 /* Pied de page */
 /*  */
 footer
 {
+    position: relative;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    display: flex;
     margin-top: 40px;
     background-color: #F2F2F2;
+    padding: 40px 0 40px 0;
+}
+
+#Page-bas
+{
+    max-width: 1400px;
+    display: flex;
+    margin: auto;
+    padding: 0 50px 0 50px;
 }
 
 .Rubrique
@@ -253,5 +385,9 @@ footer
     width: 33%;
     display: flex;
     flex-direction: column;
-    line-height:  2em;
+}
+
+.Rubrique a
+{
+    margin: 0.5em 0 0.5em 0;
 }
