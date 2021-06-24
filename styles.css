@@ -6,11 +6,14 @@ body
     font-family: 'Raleway', sans-serif;
 }
 
+/* Police importée */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 #Page
 {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: 0 auto 0 auto;
-    padding: 20px 50px 50px 50px;
+    padding: 0px 50px 50px 50px;
 }
 
 /* Titre */
@@ -65,15 +68,15 @@ nav ul
 
 nav li
 {
-    padding: 20px;
+    padding: 20px 0 20px 0;
 }
 
 nav a
 {
-    padding-top: 30px;
+    padding: 34px 15px 0 15px;
 }
 
-nav a:focus
+nav a:focus, nav a:hover, #actif
 {
     color: #0065FC;
     border-top: 2px solid #0065FC;
@@ -88,6 +91,7 @@ strong
 form
 {
     display: flex;
+    margin-bottom: 10px;
 }
 
 #Lieu-icone
@@ -144,6 +148,7 @@ form
     margin: -2px;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 #Economique, #Familial, #Romantique, #Animaux
@@ -157,7 +162,8 @@ form
 
 #Economique:hover, #Familial:hover, #Romantique:hover, #Animaux:hover
 {
-    padding: 13px;
+    margin-left: -42px;
+    padding: 13px 13px 13px 55px;
     border: none;
     border-radius: 30px;
     background-color:#F2F2F2;
@@ -193,32 +199,41 @@ form
     flex-wrap: wrap;
 }
 
+#Propositions h1
+{
+    margin: 5px 10px 10px 15px;
+}
+
 #Resultats
 {
     display: flex;
     flex-direction: column;
-    max-width: 880px;
-    width:auto;
+    max-width: 850px;
+    /* max-width: 55%; */
+    width: auto;
     border: none;
-    border-radius: 10px;
-    padding: 30px 0 30px 30px;
+    border-radius: 20px;
+    padding: 30px;
     margin-right: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     background-color:#F2F2F2;
 }
 
 #Populaires
 {
-    min-width: 260px;
+    width: 365px;
+    max-width: fit-content;
+    flex: auto;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     background-color:#F2F2F2;
 }
 
-#Populaire h1
+#Populaires h1
 {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -226,6 +241,7 @@ form
 {
     display: flex;
     flex-wrap: wrap;
+    width: auto;
 }
 #Articles-populaires
 {
@@ -234,8 +250,10 @@ form
 
 article
 {
+    display: flex;
     border: none;
-    width: 240px;
+    min-width: 245px;
+    flex: auto;
     height: 190px;
     /* margin: 15px; */
     border-radius: 20px;
@@ -243,7 +261,7 @@ article
     box-shadow: 0 0 10px rgb(211, 211, 211);
 }
 
-article h3
+article h3, article p
 {
     line-height: normal;
     letter-spacing: normal;
@@ -251,29 +269,39 @@ article h3
     word-wrap: break-word;
 }
 
+#Articles-resultats article
+{
+    flex-direction: column;
+}
+
 #Articles-populaires article
 {
-    display: flex;
-    width: 340px;
+    min-width: 340px;
     height: 140px;
+}
+
+#Articles-resultats a, #Articles-populaires a
+{
+    flex: auto;
 }
 
 .vertical-box
 {
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 
 #Articles-populaires .vertical-box
 {
-    margin: 5px 5px 20px 5px;
+    margin: 15px 5px 15px 5px;
 }
 
 article img
 {
     object-fit: cover;
-    width: 230px;
+    min-width: 235px;
+    flex: auto;
     height: 110px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -282,7 +310,8 @@ article img
 
 #Articles-populaires article img
 {
-    width: 120px;
+    min-width: 120px;
+    max-width: 150px;
     height: auto;
     border-top-right-radius: 0;
     border-bottom-left-radius: 20px;
@@ -295,7 +324,7 @@ article strong
 
 article p
 {
-    padding: 10px;
+    padding: 8px;
     font-size: small;
     margin: 0;
     line-height: 20%;
@@ -309,41 +338,42 @@ article p
 {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1400px;
+    /* max-width: 1400px; */
+    width: auto;
+    margin-left: -20px;
 }
 
-#Articles-activites a
+#Articles-activites a, #Articles-activites .vertical-box 
 {
     margin: 20px;
+    flex: auto;
 }
 
-#Articles-activites .vertical-box a
+#Articles-activites h3
 {
-    margin: 0;
+    margin: 15px;
 }
 
 #Articles-activites .vertical-box
 {
     min-height: 450px;
+    margin: 0;
+    /* width: auto; */
     justify-content: space-between;
-    padding: 20px;
 }
-
-/* .text
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 
 #Articles-activites article
 {
-    width: 300px;
+    flex-direction: column;
+    width: 305px;
+    width: auto;
+    flex: auto;
 }
 
 #Articles-activites article img
 {
-    width: 300px;
+    width: 305px;
+    width: auto;
     padding: 0;
 }
 
@@ -367,7 +397,6 @@ footer
     bottom: 0;
     left: 0;
     width: 100%;
-    margin-top: 40px;
     background-color: #F2F2F2;
     padding: 40px 0 40px 0;
 }
