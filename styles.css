@@ -9,6 +9,7 @@ body
 /* Police importée */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
+
 #Page
 {
     /* max-width: 1400px; */
@@ -64,22 +65,22 @@ nav ul
 {
     list-style-type: none;
     display: flex;
+    margin: 0;
 }
 
 nav li
 {
-    padding: 20px 0 20px 0;
+    padding: 34px 15px 34px 15px;
 }
 
-nav a
+nav li:focus, nav li:hover, #li1
 {
-    padding: 34px 15px 0 15px;
+    border-top: 2px solid #0065FC;
 }
 
-nav a:focus, nav a:hover, #actif
+nav a:focus, nav a:hover, #li1 a
 {
     color: #0065FC;
-    border-top: 2px solid #0065FC;
 }
 
 strong
@@ -110,7 +111,7 @@ form
     border-style: solid;
 }
 
-#Rechercher
+#Rechercher, #Icone-rechercher
 {
     color: white;
     background-color: #0065FC;
@@ -119,6 +120,11 @@ form
     border-top-right-radius: 10px;
     border-style: none;
     font-weight: bold;
+}
+
+#Icone-rechercher
+{
+    display: none;
 }
 
 /* Filtres */
@@ -252,8 +258,8 @@ article
 {
     display: flex;
     border: none;
-    min-width: 245px;
-    flex: auto;
+    /* min-width: 245px; */
+    /* flex: auto; */
     height: 190px;
     /* margin: 15px; */
     border-radius: 20px;
@@ -338,15 +344,26 @@ article p
 {
     display: flex;
     flex-wrap: wrap;
-    /* max-width: 1400px; */
-    width: auto;
+    
+    align-items: center;
     margin-left: -20px;
 }
 
-#Articles-activites a, #Articles-activites .vertical-box 
+.boite
 {
-    margin: 20px;
+    width: 300px;
     flex: auto;
+    margin: 20px;
+}
+
+#Articles-activites a
+{
+    margin: 20px 0 20px 0;
+}
+
+#Articles-activites .vertical-box
+{
+    margin: 0;
 }
 
 #Articles-activites h3
@@ -354,26 +371,13 @@ article p
     margin: 15px;
 }
 
-#Articles-activites .vertical-box
-{
-    min-height: 450px;
-    margin: 0;
-    /* width: auto; */
-    justify-content: space-between;
-}
-
 #Articles-activites article
 {
     flex-direction: column;
-    width: 305px;
-    width: auto;
-    flex: auto;
 }
 
 #Articles-activites article img
 {
-    width: 305px;
-    width: auto;
     padding: 0;
 }
 
@@ -403,7 +407,6 @@ footer
 
 #Page-bas
 {
-    max-width: 1400px;
     display: flex;
     margin: auto;
     padding: 0 50px 0 50px;
@@ -419,4 +422,202 @@ footer
 .Rubrique a
 {
     margin: 0.5em 0 0.5em 0;
+}
+
+/*  */
+/* Autres tailles d'écran */
+/*  */
+
+@media all and (max-width: 800px)
+{
+    #Page
+    {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav
+    {
+        width: 100%;
+    }
+
+    nav ul 
+    {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    nav li
+    {
+        padding: 0;
+        width: 50%;
+        display: flex;
+        text-align: center;
+    }
+
+    nav a
+    {
+        padding: 20px;
+        margin: auto;
+        width: 100%;
+    }
+
+    
+
+    nav li:focus, nav li:hover, #li1
+    {
+        color: #0065FC;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    #li1 li, #li2 li
+    {
+        width: 50%;
+    }
+
+    #reservia-logo
+    {
+        margin: 20px;
+    }
+
+    #Populaires h1, #Resultats h1, #Activites h1
+    {
+        margin: 40px 20px 20px 20px;
+    }
+
+    #Activites h1
+    {
+        margin-left: 0px;
+    }
+
+    #Lieu
+    {
+        margin-right: -10px;
+        width: 100%;
+    }
+
+    form
+    {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #Rechercher
+    {
+        display: none;
+    }
+
+    #Icone-rechercher
+    {
+        display: block;
+        border-radius: 10px;
+        width: 17px;
+        padding: 10px 13px 10px 13px;
+    }
+
+    #Filtre-bar
+    {
+        flex-wrap: wrap;
+        margin-left: -5px;
+    }
+
+    #Filtre-bar h2
+    {
+        width: 100%;
+        margin-left: 5px;
+    }
+
+    .filtre
+    {
+        margin: 5px;
+    }
+
+    #Recherche, #Activites
+    {
+        margin: 20px;
+    }
+
+    #Propositions
+    {
+        flex-direction: column-reverse;
+    }
+
+    #Resultats
+    {
+        background-color: transparent;
+    }
+
+    #Resultats, #Populaires
+    {
+        padding: 0;
+        margin: 0;
+    }
+
+    #Populaires
+    {
+        border-radius: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    a
+    {
+        margin: 6px 20px 6px 20px;
+    }
+
+    #Articles-populaires
+    {
+        margin-bottom: 30px;
+    }
+
+    #Articles-activites a, #Articles-activites
+    {
+        margin: 0;
+    }
+
+    article
+    {
+        min-width: none;
+        width: auto;
+    }
+
+    #Activites article
+    {
+        
+        margin: 10px 0 10px 0;
+    }
+
+    .boite
+    {
+        margin: 0;
+    }
+
+    #a1, #a2, #a3, #a4, #a5, #a6
+    {
+        height: 190px;
+    }
+
+    #a1 img, #a2 img, #a3 img, #a4 img, #a5 img, #a6 img
+    {
+        height: 130px;
+    }
+
+    #Page-bas
+    {
+        flex-direction: column;
+        padding: 0 30px 0 30px;
+    }
+
+    .Rubrique
+    {
+        width: auto;
+    }
 }

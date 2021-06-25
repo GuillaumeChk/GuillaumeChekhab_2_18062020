@@ -18,9 +18,9 @@
                 <!-- Navigation -->
                 <nav>
                     <ul>
-                        <li><a id="actif" href="#Resultats">Hébergements</a></li>
-                        <li><a href="#Activites">Activités</a></li>
-                        <li><a href=""><strong>S'inscrire</strong></a></li>
+                        <li id="li1"><a href="#Resultats">Hébergements</a></li>
+                        <li id="li2"><a href="#Activites">Activités</a></li>
+                        <li id="li3"><a href="#"><strong>S'inscrire</strong></a></li>
                     </ul>
                 </nav>
             </header>
@@ -37,6 +37,7 @@
                     </label>
                     <input type="text" id="Lieu" name="Lieu" value="Marseille, France">
                     <input type="submit" value="Rechercher" id="Rechercher">
+                    <input type="image" id="Icone-rechercher" alt="Rechercher" src="images/icon/search-solid.svg">
                 </form>
 
                 <!-- Filtres -->
@@ -248,52 +249,62 @@
 
                 <!-- Articles (6 cartes) -->
                 <div id="Articles-activites">
-                    <a href="">
-                        <article id="a1">
-                            <img src="images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
-                                alt="Photo du Vieux Port">
-                            <h3>Vieux Port</h3>
-                        </article>
-                    </a>
-                    <div class="vertical-box">
+                    <div class="boite">
                         <a href="">
-                        <article id="a2">
-                            <img src="images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg" 
-                                alt="Photo du Fort de Pomègues">
-                            <h3>Fort de Pomègues</h3>
-                        </article>
-                    </a>
-                    <a href="">
-                        <article id="a3">
-                            <img src="images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" 
-                                alt="Photo des Îles du Frioul">
-                            <h3>Îles du Frioul</h3>
-                        </article>
-                    </a>
-                    </div>
-                    
-                    <a href="">
-                        <article id="a4">
-                            <img src="images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" 
-                                alt="Photo du Parc National des Calanques">
-                            <h3>Parc National des Calanques</h3>
-                        </article>
-                    </a>
-                    <div class="vertical-box">
-                        <a href="">
-                        <article id="a5">
-                            <img src="images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"     
-                            alt="Photo de Notre-Dame-de-la-Garde">
-                            <h3>Notre-Dame-de-la-Garde</h3>
-                        </article>
-                        </a>
-                        <a href="">
-                            <article id="a6">
-                                <img src="images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" 
-                                    alt="Photo du Parc Longchamp">
-                                <h3>Parc Longchamp</h3>
+                            <article id="a1">
+                                <img src="images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
+                                    alt="Photo du Vieux Port">
+                                <h3>Vieux Port</h3>
                             </article>
                         </a>
+                    </div>
+
+                    <div class="boite">
+                        <div class="vertical-box">
+                            <a href="">
+                            <article id="a2">
+                                <img src="images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg" 
+                                    alt="Photo du Fort de Pomègues">
+                                <h3>Fort de Pomègues</h3>
+                            </article>
+                        </a>
+                        <a href="">
+                            <article id="a3">
+                                <img src="images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" 
+                                    alt="Photo des Îles du Frioul">
+                                <h3>Îles du Frioul</h3>
+                            </article>
+                        </a>
+                        </div>
+                    </div>
+
+                    <div class="boite">
+                        <a href="">
+                            <article id="a4">
+                                <img src="images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" 
+                                    alt="Photo du Parc National des Calanques">
+                                <h3>Parc National des Calanques</h3>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="boite">
+                        <div class="vertical-box">
+                            <a href="">
+                                <article id="a5">
+                                    <img src="images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"     
+                                    alt="Photo de Notre-Dame-de-la-Garde">
+                                    <h3>Notre-Dame-de-la-Garde</h3>
+                                </article>
+                            </a>
+                            <a href="">
+                                <article id="a6">
+                                    <img src="images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" 
+                                        alt="Photo du Parc Longchamp">
+                                    <h3>Parc Longchamp</h3>
+                                </article>
+                            </a>
+                        </div>
                     </div>
                     
                 </div>
