@@ -73,6 +73,11 @@ nav li:focus, nav li:hover, #li1
     border-top: 2px solid #0065FC;
 }
 
+#li3:hover, #li3:focus
+{
+    border: none;
+}
+
 nav a:focus, nav a:hover, #li1 a
 {
     color: #0065FC;
@@ -337,6 +342,10 @@ article p
     line-height: 20%;
 }
 
+#Articles-populaires p
+{
+    line-height:normal;
+}
 
 /*  */
 /* Section Activités */
