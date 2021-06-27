@@ -449,7 +449,8 @@ footer
     }
 }
 
-@media only screen and (max-device-width: 900px)
+@media only screen and (max-device-width: 900px),
+        only screen and (max-width: 900px)
 {
     #Page
     {
@@ -496,7 +497,7 @@ footer
         border-bottom: 3px solid #F2F2F2;
     }
 
-    nav li:focus, nav li:hover, #li1, #li2:hover
+    nav li:hover, #li1, #li2:hover
     {
         color: #0065FC;
         border-top: none;
