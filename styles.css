@@ -6,13 +6,8 @@ body
     font-family: 'Raleway', sans-serif;
 }
 
-/* Police importée */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
-
-
 #Page
 {
-    /* max-width: 1400px; */
     margin: 0 auto 0 auto;
     padding: 0px 50px 50px 50px;
 }
@@ -49,7 +44,7 @@ header
 /* Image logo Reservia */
 #reservia-logo
 {
-    height: 40px;
+    height: 50px;
 }
 
 /* Liens */
@@ -93,20 +88,26 @@ form
 {
     display: flex;
     margin-bottom: 10px;
+    height: 50px;
 }
 
 #Lieu-icone
 {
+    display: block;
+    padding: 15px;
+    padding-left: 19px;
+    padding-right: 19px;
+    font-size: 1.1em;
     background-color: #F2F2F2;
-    padding: 13px 13px 13px 15px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 #Lieu
 {
     font-weight: bold;
-    padding: 10px;
+    font-size: 1.1em;
+    padding: 15px;
     border-color: #F2F2F2;
     border-style: solid;
 }
@@ -115,11 +116,11 @@ form
 {
     color: white;
     background-color: #0065FC;
-    padding: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    padding: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
     border-style: none;
-    font-weight: bold;
+    font-size: 1.1em;
 }
 
 #Icone-rechercher
@@ -131,6 +132,7 @@ form
 #Filtre-bar
 {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
 }
 
@@ -140,6 +142,7 @@ form
     margin: 20px 0px 20px 20px;
     border-radius: 30px;
     border: 2px solid gainsboro;
+    height: 42px;
 }
 
 #economique-icone, #familial-icone, #romantique-icone, #animaux-icone
@@ -148,9 +151,9 @@ form
     border: none;
     background-color: #DEEBFF;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    padding: 13px;
+    width: 16px;
+    height: 16px;
+    padding: 15px;
     margin: -2px;
     justify-content: center;
     align-items: center;
@@ -172,7 +175,7 @@ form
     padding: 13px 13px 13px 55px;
     border: none;
     border-radius: 30px;
-    background-color:#F2F2F2;
+    background-color:#fafafa;
     font-weight: bold;
     color:#0065FC;
 }
@@ -215,7 +218,6 @@ form
     display: flex;
     flex-direction: column;
     max-width: 850px;
-    /* max-width: 55%; */
     width: auto;
     border: none;
     border-radius: 20px;
@@ -228,7 +230,7 @@ form
 #Populaires
 {
     width: 365px;
-    max-width: fit-content;
+    max-width: 850px;
     flex: auto;
     border: none;
     border-radius: 20px;
@@ -282,7 +284,6 @@ article h3, article p
 
 #Articles-populaires article
 {
-    min-width: 340px;
     height: 140px;
 }
 
@@ -316,8 +317,8 @@ article img
 
 #Articles-populaires article img
 {
-    min-width: 120px;
-    max-width: 150px;
+    min-width: 130px;
+    max-width: 130px;
     height: auto;
     border-top-right-radius: 0;
     border-bottom-left-radius: 20px;
@@ -374,6 +375,7 @@ article p
 #Articles-activites article
 {
     flex-direction: column;
+    max-width: 700px;
 }
 
 #Articles-activites article img
@@ -428,7 +430,26 @@ footer
 /* Autres tailles d'écran */
 /*  */
 
-@media all and (max-width: 800px)
+@media only screen and (max-width: 1080px)
+{
+    #Resultats
+    {
+        margin-right: 0;
+    }
+
+    form
+    {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .filtre
+    {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-device-width: 900px)
 {
     #Page
     {
@@ -469,18 +490,30 @@ footer
         width: 100%;
     }
 
-    
+    #li1 li, #li2 li, #li2
+    {
+        width: 50%;
+        border-bottom: 3px solid #F2F2F2;
+    }
 
-    nav li:focus, nav li:hover, #li1
+    nav li:focus, nav li:hover, #li1, #li2:hover
     {
         color: #0065FC;
         border-top: none;
-        border-bottom: 2px solid #0065FC;
+        border-bottom: 3px solid #0065FC;
+    }
+    
+    #li3
+    {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        width: auto;
     }
 
-    #li1 li, #li2 li
+    #li3:hover
     {
-        width: 50%;
+        border: none;
     }
 
     #reservia-logo
@@ -518,9 +551,11 @@ footer
     #Icone-rechercher
     {
         display: block;
-        border-radius: 10px;
+        border-radius: 15px;
         width: 17px;
-        padding: 10px 13px 10px 13px;
+        padding: 15px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     #Filtre-bar
