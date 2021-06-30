@@ -6,6 +6,16 @@ body
     font-family: 'Raleway', sans-serif;
 }
 
+.blue-color
+{
+    color: #0065FC;
+}
+
+.gainsboro-color
+{
+    color: gainsboro;
+}
+
 #Page
 {
     margin: 0 auto 0 auto;
@@ -89,7 +99,7 @@ strong
 }
 
 /* Barre de recherche */
-form
+form, .formulaire
 {
     display: flex;
     margin-bottom: 10px;
@@ -222,20 +232,17 @@ form
 {
     display: flex;
     flex-direction: column;
-    max-width: 850px;
     width: auto;
     border: none;
     border-radius: 20px;
     padding: 30px;
-    margin-right: 40px;
+    margin-right: 0;
     margin-bottom: 40px;
     background-color:#F2F2F2;
 }
 
 #Populaires
 {
-    width: 365px;
-    max-width: 850px;
     flex: auto;
     border: none;
     border-radius: 20px;
@@ -285,6 +292,7 @@ article h3, article p
 #Articles-resultats article
 {
     flex-direction: column;
+    max-width: 500px;
 }
 
 #Articles-populaires article
@@ -439,14 +447,32 @@ footer
 /* Autres tailles d'écran */
 /*  */
 
-@media only screen and (max-width: 1080px)
+@media only screen and (min-width: 1360px)
 {
     #Resultats
     {
-        margin-right: 0;
+        max-width: 50%;
+        width: auto;
+        margin-right: 40px;
     }
 
-    form
+    #Populaires
+    {
+        min-width: none;
+        width: auto;
+    }
+
+    #Resultats article
+    {
+        /* min-width: 400px; */
+        max-width: 400px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 1080px)
+{
+    form, .formulaire
     {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -458,6 +484,22 @@ footer
     }
 }
 
+
+/* Tablets */
+@media only screen and (max-width: 1360px)
+{
+    #Propositions
+    {
+        flex-direction: column-reverse;
+    }
+
+    #Populaires
+    {
+        width: auto;
+    }
+}
+
+/* Phones */
 @media only screen and (max-device-width: 700px),
         only screen and (max-width: 700px)
 {
@@ -547,7 +589,7 @@ footer
         width: 100%;
     }
 
-    form
+    form, .formulaire
     {
         margin-top: 30px;
         margin-bottom: 30px;
