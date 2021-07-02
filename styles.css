@@ -458,7 +458,7 @@ footer
 
     #Populaires
     {
-        min-width: none;
+        min-width: 0;
         width: auto;
     }
 
@@ -500,8 +500,7 @@ footer
 }
 
 /* Phones */
-@media only screen and (max-device-width: 700px),
-        only screen and (max-width: 700px)
+@media only screen and (max-width: 700px)
 {
     #Page
     {
@@ -672,7 +671,7 @@ footer
 
     article
     {
-        min-width: none;
+        min-width: 0;
         width: auto;
     }
 
